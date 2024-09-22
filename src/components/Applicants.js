@@ -49,28 +49,28 @@ class Applicants extends Component {
 
   }
 
-  ApplicationUpdate(id,statusId) {
-   
+  ApplicationUpdate(id, statusId) {
 
-  
+
+
     fetch('http://localhost:5000/ApplicationUpdate', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({app_id:id,status_id:statusId})
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ app_id: id, status_id: statusId })
     })
-        .then(result => result.json())
-        .then(resp => {
-            console.warn(resp);
-            alert('The Applicant status is updated');
-            // this.props.router.navigate('/'); // Navigate to home
-            this.getApplicantData()
-        })
-        .catch(error => {
-            console.error('Error during registration:', error);
-        });
-}
+      .then(result => result.json())
+      .then(resp => {
+        console.warn(resp);
+        alert('The Applicant status is updated');
+        // this.props.router.navigate('/'); // Navigate to home
+        this.getApplicantData()
+      })
+      .catch(error => {
+        console.error('Error during registration:', error);
+      });
+  }
 
 
   render() {
@@ -78,12 +78,6 @@ class Applicants extends Component {
     return (
       <div>
         <SideNav />
-        <div className="card-bar">
-          <div className="card-body">
-            <h5 className="card-title">By Adithi Anand </h5>
-            <p className="card-text">Be Honest and always duty comes first ...</p>
-          </div>
-        </div>
         <p>
           Applicants
         </p>
@@ -121,9 +115,9 @@ class Applicants extends Component {
                   </td>
                   <td>{item.status}</td>
                   <td>
-                    <span onClick={() => this.ApplicationUpdate(item.id,2)}><FontAwesomeIcon icon={faThumbsUp} color="Green" /></span>
+                    <span onClick={() => this.ApplicationUpdate(item.id, 2)}><FontAwesomeIcon icon={faThumbsUp} color="Green" /></span>
                     &nbsp;
-                    <span onClick={() => this.ApplicationUpdate(item.id,3)}><FontAwesomeIcon icon={faThumbsDown} color="red" /></span>
+                    <span onClick={() => this.ApplicationUpdate(item.id, 3)}><FontAwesomeIcon icon={faThumbsDown} color="red" /></span>
                   </td>
                 </tr>
               ))}

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faDoorOpen } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faRightToBracket, faRightFromBracket, faDoorOpen, faBars } from '@fortawesome/free-solid-svg-icons';
 import './SideNav.css';
+
 
 const SideNav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -61,15 +62,35 @@ const SideNav = () => {
     };
 
     return (
-        <div>
-            <div className={`side-nav ${isOpen ? 'open' : ''}`}>
-                <div className="nav-content">
-                    {renderNavItems()}
+        <div style={{ display: "flex" }}>
+            <div className="card-bar">
+                <div className={`side-nav ${isOpen ? 'open' : ''}`}>
+                    <div className="nav-content">
+                        {renderNavItems()}
+                    </div>
+                </div>
+                <button className="toggle-btn" onClick={toggleSideNav}>
+                    {/* {isOpen ? 'Close' : 'Open'} */}
+                    <FontAwesomeIcon icon={faBars} color="Black" />
+                </button>
+
+                <div className="card-body">
+                    <h5 className="card-title">By Adithi Anand </h5>
+                    <p className="card-text">Be Honest and always duty comes first ...</p>
+                </div>
+
+                <div style={{ marginLeft: "auto" }}>
+                    {
+                        localStorage.getItem('login') ?
+                            <button className='toggle-btn' style={{ marginLeft: 'auto' }} href="#logout"><Link className='nav-link' to="/logout"><FontAwesomeIcon icon={faRightFromBracket} color="Black" />Logout</Link></button>
+                            :
+                            <button className='toggle-btn' style={{ marginLeft: 'auto' }} href="#login"><Link className='nav-link' to="/login"><FontAwesomeIcon icon={faRightToBracket} color="Black" />Login</Link></button>
+
+                    }
+
                 </div>
             </div>
-            <button className="toggle-btn" onClick={toggleSideNav}>
-                {isOpen ? 'Close' : 'Open'}
-            </button>
+
         </div>
     );
 };
