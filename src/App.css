@@ -1,0 +1,338 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+/* Login Page CSS  */
+.left-login {
+  width: 30%;
+  height: 90vh;
+
+  float: right;
+  background-color: rgb(118, 147, 236);
+}
+
+.small-logo {
+  width: 100px;
+  /* Adjust width as needed */
+  height: auto;
+  /* Keep aspect ratio */
+}
+
+.left-login button {
+  width: 20%;
+}
+
+.right-login {
+  width: 70%;
+  height: 90vh;
+  float: right;
+
+  background-size: cover;
+  /* Ensure the image covers the entire element */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Prevent the image from repeating */
+}
+
+
+/* Admission Page*/
+
+.admbk{
+
+  width: 100%;
+  height: 90vh;
+  float: right;
+  background-color: rgb(118, 147, 236);
+}
+
+.card-bar {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(154, 236, 205);
+}
+
+
+.admft{
+  width: 50%;
+  height: 65vh;
+  float: center;
+  background-color: rgb(24, 43, 102);
+  margin-left: 25%;
+  margin-top: 10vh;
+}
+p.NameText {
+  color: #ffffff;
+  margin: auto;
+  font-weight: bolder;
+}
+
+/* Home Page */
+
+/* Home Page */
+
+.home-container {
+  display: flex;           /* Use flexbox for layout */
+}
+
+.left-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;           /* Adjust height as needed */
+  background-color: rgb(8, 17, 28);
+  width: 50%;             /* Adjust width as needed */
+  overflow: hidden;       /* Prevent overflow */
+}
+
+.right-home {
+  width: 50%;             
+  height: 65vh;          
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(8, 17, 28);
+  color: white;           /* Set text color to white */
+  padding: 20px;          /* Add padding for neatness */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  text-align: center;     /* Center the text */
+}
+
+/* Container for boxes */
+.box-container {
+  display: flex;                 /* Use flexbox */
+  justify-content: space-between; /* Distribute boxes evenly */
+  margin-top: 0px;               /* Space between the right window and the boxes */
+}
+
+/* Common box styles */
+.box1-home {
+  width: 20%;                     /* Adjust width to fit five boxes */
+  height: 25vh;
+  display: flex;
+  justify-content: center;        /* Center content */
+  align-items: center;            /* Center content */
+  color: white;                   /* Optional: White text for contrast */
+  font-weight: bold;              /* Optional: Bold text */
+}
+
+/* Assign different background colors to each box */
+.box1-home:nth-child(1) {
+  background-color: rgb(94, 219, 45); /* Olive */
+}
+
+.box1-home:nth-child(2) {
+  background-color: rgb(18, 150, 77); /* Green */
+}
+
+.box1-home:nth-child(3) {
+  background-color: rgb(15, 126, 200); /* Blue */
+}
+
+.box1-home:nth-child(4) {
+  background-color: rgb(243, 69, 176); /* Red */
+}
+
+.box1-home:nth-child(5) {
+  background-color: rgb(150, 18, 139); /* Purple */
+}
+
+/* Common box styles */
+.box1-home {
+  width: 20%;             
+  height: 25vh;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  color: white;           /* Set text color to white */
+  font-weight: bold;      
+}
+
+/* Style for the icon */
+.icon-large {
+  font-size: 48px;        /* Increase the size of the icon */
+  color: white;           /* Set icon color to white */
+  margin-bottom: 10px;    /* Add some space below the icon */
+  margin-top: 20px; 
+}
+
+/* Style for the '300+' text */
+.count {
+  font-size: 35px;        /* Increase font size */
+  margin: 0;              /* Remove default margin */
+}
+
+/* Style for the 'Students' text */
+.label {
+  font-size: 20px;        /* Set a smaller font size */
+  margin: 0;              /* Remove default margin */
+}
+
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+  padding: 10px 0;
+  margin-top: 0px;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+.marquee-content img {
+  margin-right: 10px;
+}
+
+/* Style for the 'Applicants page' text */
+.app-tbl{
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%; 
+  background-color: rgb(66, 131, 228); 
+}
+/* Style for the 'About us  page' text */
+.NameText {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 36px;
+  margin: 0;
+  padding-left: 10px; /* This ensures the text is slightly away from the left edge */
+}
+
+.us-abt {
+  width: 80%;
+  height: 6vh;
+  margin-left: 10%;
+  background-color: rgb(35, 234, 195);
+  display: flex;
+  align-items: center; /* Center the text vertically within the div */
+}
+
+.us-left {
+  width: 40%;
+  height: 40vh;
+  margin-left: 10%;
+  float: left;
+  background-color: rgb(10, 47, 82);
+ 
+}
+
+
+
+.us {
+  height: auto;
+  /* background-color: rgb(221, 165, 101) !important; */
+}
+
+.us-img {
+  width: auto;
+  /* Adjust width as needed */
+  height: 40vh;
+  /* Keep aspect ratio */
+}
+
+.us-right {
+  width: 40%;
+  height: 40vh;
+  margin-right: 10%;
+  float: right;
+  background-color: rgb(10, 47, 82);
+ 
+  /* Ensure the image covers the entire element */
+  /* background-position: center; */
+  /* Center the image */
+  /* background-repeat: no-repeat; */
+  /* Prevent the image from repeating */
+}
+
+p.text {
+  color: #ffffff;
+}
+
+p.title {
+  padding-top: 10%;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* Style for the 'About us  page' text */
+.contact-img {
+  width: auto;
+  float: center;
+  margin-top: 10%;
+  /* Adjust width as needed */
+  height: 60%;
+  /* Keep aspect ratio */
+}
+
+/* Style for the 'Admits  page' text */
+.ad-top {
+  width: 100%;
+  height: 20vh;
+  margin-top: 10vh;
+  float: top;
+  background-color: rgb(10, 47, 82);
+ 
+}
+
+.ad-below {
+  width: 100%;
+  height: 65vh;
+  margin-top: 0vh;
+  float: top;
+  background-color: rgb(31, 108, 180);
+ 
+}
+
+/* Style for the 'Admits  page' text */
+.fee-top {
+  width: 100%;
+  height: 40%;
+  margin-top: 10vh;
+  float: top;
+  background-color: rgb(10, 47, 82);
+ 
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
